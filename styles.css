@@ -1,0 +1,221 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+
+.interface .menu {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    background-color: rgb(236, 185, 220);
+    padding: 10px 20px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.menu a:hover {
+    color: deeppink;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(163, 212, 234);
+    color: #222;
+}
+
+
+  /* .fundo {
+       background-image: url('pgybackfilms.png');
+         background-size: cover;
+       background-position: center;
+        background-repeat: no-repeat;
+        height: auto;
+      
+     } */
+       
+
+    .card-music-video {
+        background-color: rgb(150, 218, 235);
+        width: 220px;
+        border-radius: 12px;
+        box-shadow: 4px 4px 12px rgba(18, 148, 180, 0.881);
+        overflow: hidden;
+        flex: 0 0 auto; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        margin: 10px;
+        scroll-snap-align: start;
+    }
+
+    .card-music-video img {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: transform 0.3s ease;
+    }
+
+    .card-music-video:hover {
+    transform: translateY(-10px);
+    box-shadow: 6px 10px 20px rgba(32, 126, 219, 0.849);
+}
+
+    button {
+        background-color: aqua;
+    }
+
+
+
+    .card { 
+    background-color: #eb96d5;
+    width: 220px;
+    height: 260px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px rgba(124, 45, 122, 0.5);
+    overflow: hidden;
+    flex: 0 0 auto; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    margin: 10px;
+    scroll-snap-align: start;
+    background: linear-gradient(190deg, #f1bde6, #db9eee);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 6px 10px 20px rgba(224, 8, 94, 0.6);
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.card img .card-music-video:hover{
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.card-content h1 {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.card-content p { 
+    font-size: 0.8rem; 
+    align-content: last baseline; 
+    max-height: 50px; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    display: -webkit-box; 
+    text-align: justify; 
+    text-justify: inter-word; 
+    margin-bottom: 5px; 
+    line-height: 1.0; 
+    margin-top: 0;
+}
+
+.card-content button {
+    background-color: rgb(163, 28, 114);
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    color: white;
+    padding: 6px;
+    margin-bottom: auto;
+    font-size: 0.85rem; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0; 
+    pointer-events: none; 
+}
+
+.carrossel-container:hover button {
+  opacity: 1;      
+  pointer-events: auto; 
+}
+
+.card-content button:hover {
+    background-color: rgb(123, 83, 121);
+    transform: scale(1.05);
+}
+
+.card-button {
+    display: flex;              
+    justify-content: center;     
+    align-items: center;       
+    padding: 0 15px;           
+    background-color: rgb(176, 35, 129);
+    border: none;
+    border-radius: 5px;
+    width: 85%;
+    color: rgb(255, 255, 255);
+    font-size: 18px; 
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;    
+}
+
+.card-button:hover {
+    background-color: rgb(218, 77, 145);
+    transform: scale(1.05);
+}
+
+.card button {
+    justify-content: center;
+}
+
+.carrossel {
+    display: flex;          
+    gap: 15px;        
+    overflow-x: auto;       
+    scroll-snap-type: x mandatory; 
+}
+
+.carrossel::-webkit-scrollbar {
+    height: 8px; 
+}
+
+.carrossel::-webkit-scrollbar {
+    height: 10px;            
+}
+
+.carrossel::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #e91e63, #9c27b0); 
+    border-radius: 10px;
+}
+
+.carrossel::-webkit-scrollbar-track {
+    background: transparent;  
+}
+
