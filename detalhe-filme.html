@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe do Filme</title>
+</head>
+<body>
+
+    <style>
+   * {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+   }
+
+   body {
+         background-color: aquamarine;
+   }
+
+  .conteudo { display: none; }
+  .active { display: block; }
+
+  </style>
+
+  <div id="classe1" class="conteudo">
+  <h1>Mantis</h1>
+  <p>Descrição do filme 1</p>
+
+   <style>
+
+    body {
+    background-image: url('imagens/NPBack.png'); /* caminho da sua imagem */
+    background-size: cover;      /* faz a imagem cobrir toda a tela */
+    background-position: center; /* centraliza a imagem */
+    background-repeat: no-repeat; /* não repete */
+    min-height: 100vh;           /* garante que ocupe toda a altura da tela */
+   }
+
+  </style>
+
+</div>
+
+<div id="classe2" class="conteudo">
+  <h1>Filme 2</h1>
+  <p>Descrição do filme 2</p>
+</div>
+
+<div id="classe3" class="conteudo">
+  <h1>Filme 3</h1>
+  <p>Descrição do filme 3</p>
+</div>
+
+<script>
+  const classe = new URLSearchParams(window.location.search).get('classe'); 
+  const elemento = document.getElementById(`classe${classe}`);
+  if (elemento) elemento.classList.add('active');
+</script>
+
+
+   
+</body>
+</html>
