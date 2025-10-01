@@ -7,46 +7,135 @@
 </head>
 <body>
 
-    <style>
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
    * {
-       padding: 0;
-       margin: 0;
-       box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
    }
-
-   body {
-         background-color: aquamarine;
-   }
-
-  .conteudo { display: none; }
-  .active { display: block; }
-
-  </style>
-
-  <div id="classe1" class="conteudo">
-  <h1>Mantis</h1>
-  <p>Descrição do filme 1</p>
-
-   <style>
-
+      
     body {
-    background-image: url('imagens/NPBack.png');
+    background-color: aquamarine; 
     background-size: cover;     
     background-position: center; 
     background-repeat: no-repeat; 
     min-height: 100vh;         
    }
 
+    .poster img {
+    width: 50%;
+    height: 50%;
+    margin-top: 20px;
+    margin-left: 700px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    max-width: 200px;
+    min-width: none;
+   }
+
+   .container {
+    position: relative;
+   }
+
+   .conteudo {
+    position: absolute;
+    bottom: 290px;
+    left: 30px;
+    right: 10px;
+    color: white;
+   }
+
+   .sinopse {
+    text-align: justify;
+    align-items: baseline;
+    max-width: 625px;
+    line-height: 1.3;
+    margin-left: 30px;
+    margin-top: 120px;
+    color: white;
+    text-indent: 2em;
+
+   }
+
+  h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+
+  .casting {
+    display: flex;        
+    gap: 10px;        
+    overflow-x: auto;       
+    scroll-snap-type: x mandatory; 
+    padding: 30px;
+    margin-left: 900px;
+    margin-top: -550px;
+}
+
+.casting::-webkit-scrollbar {
+    height: 8px; 
+}
+
+.casting::-webkit-scrollbar {
+    height: 10px;            
+}
+
+.casting img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;   
+  border-radius: 50%;
+  clip-path: circle(50% at 50% 50%);  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.casting img:hover {
+  transform: scale(1.3);
+}
+
+  .conteudo { display: none; }
+  .active { display: block; };
+
+  
+
   </style>
 
+<div id="classe3" class="conteudo">
+      <h1>NINE PUZZLES</h1>
+      <p><strong>Genres: </strong><i>Thriller, Crime, Mystery, Drama</i></p>
+    </div>
+  <div class="container">
+  <div class = "poster">
+    <img src="imagens/posterNinePuzzles.png" alt="poster Nine Puzzles">
+  </div>
 </div>
+
+ <div class="sinopse">
+  <p>Jo I-na finds her uncle murdered beside a puzzle piece but 
+    can't explain her presence; ten years later, as a criminal 
+    profiler, she investigates murders where victims are found 
+    with similar puzzle pieces.</p>
+  </div>
+
+  <div class="casting">
+  <div class = "elenco">
+    <img src="icons/dami-icon.png" alt ="exemplo1">
+    <img src="icons/dami-icon.png" alt ="exemplo2">
+    <img src="icons/dami-icon.png" alt ="exemplo3">
+   </div>
+  </div>
+ 
 
 <div id="classe2" class="conteudo">
   <h1>Filme 2</h1>
   <p>Descrição do filme 2</p>
 </div>
 
-<div id="classe3" class="conteudo">
+<div id="classe1" class="conteudo">
   <h1>Filme 3</h1>
   <p>Descrição do filme 3</p>
 </div>
@@ -55,9 +144,22 @@
   const classe = new URLSearchParams(window.location.search).get('classe'); 
   const elemento = document.getElementById(`classe${classe}`);
   if (elemento) elemento.classList.add('active');
+
+    switch (classe) {
+      case "1":
+        document.body.style.backgroundImage = "url('')";
+        break;
+      case "2":
+        document.body.style.backgroundImage = "url(' ')";
+        break;
+      case "3":
+        document.body.style.backgroundImage = "url('imagens/npback.png')";
+        break;
+      default:
+        document.body.style.backgroundImage = "url(' ')";
+    }
+
 </script>
-
-
    
 </body>
 </html>
